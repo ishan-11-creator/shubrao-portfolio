@@ -22,7 +22,7 @@ function render(filter="all"){
   projects.filter(p=>filter==="all"||p.category===filter).forEach(p=>{
     const card=document.createElement("article");
     card.className="project reveal show";
-    card.innerHTML=`<div class="project-media"><img src="assets/thumbs/reel-${String(p.id).padStart(2,"0")}.jpg" alt="${p.title}" loading="lazy"></div>
+    card.innerHTML=`<div class="project-media"><img src="reel-${String(p.id).padStart(2,"0")}.jpg" alt="${p.title}" loading="lazy"></div>
       <div class="project-info"><h3>${p.title}</h3><p>${p.desc}</p><span class="pill">${p.label}</span></div>`;
     card.addEventListener("click",()=>openProject(p));
     grid.appendChild(card);
