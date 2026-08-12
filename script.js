@@ -31,7 +31,7 @@ function render(filter="all"){
 function openProject(p){
   modal.classList.add("open"); modal.setAttribute("aria-hidden","false");
   modalTitle.textContent=p.title; modalText.textContent=p.desc; modalCategory.textContent=p.label;
-  modalVideo.src=`assets/videos/reel-${String(p.id).padStart(2,"0")}.mp4`;
+  modalVideo.src=`reel-${String(p.id).padStart(2,"0")}.mp4`;
   modalVideo.play().catch(()=>{});
 }
 function closeModal(){
